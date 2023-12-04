@@ -1,5 +1,5 @@
-import { defineConfig, devices } from '@playwright/test';
-import 'dotenv/config';
+import { defineConfig, devices } from '@playwright/test'
+import 'dotenv/config'
 
 /**
  * Read environment variables from file.
@@ -15,12 +15,12 @@ export default defineConfig({
   /* Maximum time one test can run for. */
   timeout: process.env.CI ? 60 * 1000 : 60 * 1000,
   expect: {
-		/**
-		 * Maximum time expect() should wait for the condition to be met.
-		 * For example in `await expect(locator).toHaveText();`
-		 */
-		timeout: 10 * 1000,
-	},
+    /**
+     * Maximum time expect() should wait for the condition to be met.
+     * For example in `await expect(locator).toHaveText();`
+     */
+    timeout: 10 * 1000,
+  },
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -40,10 +40,10 @@ export default defineConfig({
     trace: 'retain-on-failure',
 
     /* Capture screenshot after each test failure. */
-		screenshot: 'only-on-failure',
+    screenshot: 'only-on-failure',
 
-		/* Run browser in headless mode. */
-		headless: false,
+    /* Run browser in headless mode. */
+    headless: false,
   },
 
   /* Configure projects for major browsers */
@@ -90,4 +90,4 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+})

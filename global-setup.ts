@@ -1,7 +1,7 @@
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
 
 async function globalSetup() {
-	dotenv.config();
+  dotenv.config()
 }
 
-export default globalSetup;
+export default globalSetup
